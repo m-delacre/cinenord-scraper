@@ -1,14 +1,8 @@
-const express = require('express');
 const puppeteer = require('puppeteer');
-const PORT = 8000;
-
-const app = express()
 
 getBoulogneMovies();
 getTouquetMovies();
 getCoquellesMovies();
-
-app.listen(PORT, ()=> console.log(`Here is the movies :`))
 
 async function getBoulogneMovies() {
     const browser = await puppeteer.launch();
